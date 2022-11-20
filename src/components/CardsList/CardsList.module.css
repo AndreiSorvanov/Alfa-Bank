@@ -1,0 +1,13 @@
+.loader {
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  text-align: center;
+}
+
+.empty {
+  padding: 10px;
+  text-align: center;
+}

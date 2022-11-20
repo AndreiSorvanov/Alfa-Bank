@@ -1,0 +1,25 @@
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.checkboxInput {
+  display: none;
+}
+
+.iconContainer {
+  font-size: 0;
+  line-height: 0;
+}
+
+.checkboxInput + .iconContainer > .icon {
+  fill: none;
+  stroke: #989898;
+}
+
+.checkboxInput:checked + .iconContainer > .icon {
+  fill: #989898;
+}

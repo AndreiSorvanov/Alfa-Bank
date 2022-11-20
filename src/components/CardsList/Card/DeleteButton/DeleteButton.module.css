@@ -1,0 +1,12 @@
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.iconContainer {
+  margin-right: 3px;
+
+  font-size: 0;
+  line-height: 0;
+}

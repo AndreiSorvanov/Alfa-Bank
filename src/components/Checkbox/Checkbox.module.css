@@ -1,0 +1,19 @@
+.label {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.input {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  margin-left: 10px;
+
+  cursor: inherit;
+}

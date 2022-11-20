@@ -1,0 +1,33 @@
+.taskModalHeading {
+  margin: 0;
+  margin-bottom: 20px;
+
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.confirmBtn,
+.cancelBtn {
+  min-width: 80px;
+  min-height: 30px;
+}
+
+.confirmBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  background-color: #90ee90;
+}
+
+.cancelBtn {
+  background-color: #d3d3d3;
+}
