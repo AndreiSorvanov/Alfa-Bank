@@ -20,7 +20,7 @@ interface ICatResp {
   origin: string;
   temperament: string;
   description: string;
-  image?: ICatImageResp;
+  image: ICatImageResp | null;
 }
 
 export async function loadCardsInfo(dispatch: Dispatch<AnyAction>) {
@@ -36,7 +36,7 @@ export async function loadCardsInfo(dispatch: Dispatch<AnyAction>) {
       origin: elem.origin,
       temperament: elem.temperament,
       description: elem.description,
-      imageLink: elem?.image?.url,
+      imageLink: elem?.image?.url ?? null,
       isLiked: Math.random() < 0.5,
     }));
 

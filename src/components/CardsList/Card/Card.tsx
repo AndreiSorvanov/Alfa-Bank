@@ -14,7 +14,7 @@ export interface ICardProps {
   origin: string;
   temperament: string;
   description: string;
-  imageLink?: string;
+  imageLink: string | null;
 }
 
 export function Card({ id, isLiked, name, lifeSpan, weight, origin, temperament, description, imageLink }: ICardProps) {
