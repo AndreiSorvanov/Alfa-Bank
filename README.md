@@ -1,6 +1,8 @@
 # Alfa-Bank
 Test task for an internship in Alfa-Bank.
 
+The [Zoo Animals](https://zoo-animal-api.herokuapp.com/) API was used.
+
 For running locally:
 
 - clone this repo;
