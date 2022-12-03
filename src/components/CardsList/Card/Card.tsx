@@ -2,24 +2,22 @@ import { useDispatch } from 'react-redux';
 import { deleteCardAction, updateCardLikeAction } from '../../../store';
 import { DeleteButton } from './DeleteButton';
 import { Like } from './Like';
+import noImage from './images/no-image.webp';
 import styles from './Card.module.css';
 
 export interface ICardProps {
-  id: number;
+  id: string;
   isLiked: boolean;
   name: string;
-  latinName: string;
-  minLength: number;
-  maxLength: number;
-  minWeight: number;
-  maxWeight: number;
-  lifespan: number;
-  habitat: string;
-  geo: string;
-  imageLink: string;
+  lifeSpan: string;
+  weight: string;
+  origin: string;
+  temperament: string;
+  description: string;
+  imageLink?: string;
 }
 
-export function Card({ id, isLiked, name, latinName, minLength, maxLength, minWeight, lifespan, maxWeight, habitat, geo, imageLink }: ICardProps) {
+export function Card({ id, isLiked, name, lifeSpan, weight, origin, temperament, description, imageLink }: ICardProps) {
   const dispatch = useDispatch();
 
   const changeLike = (isLikedValue: boolean) => {
@@ -34,26 +32,26 @@ export function Card({ id, isLiked, name, latinName, minLength, maxLength, minWe
     <li className={styles.cardContainer}>
       <article className={styles.card}>
         <div className={styles.imageContainer}>
-          <img className={styles.image} src={imageLink} alt={name} />
+          <img className={styles.image} src={imageLink ?? noImage} alt={name} />
         </div>
         <div className={styles.infoContainer}>
           <div className={styles.info}>
-            <h2 className={styles.name}>{`${name} (${latinName})`}</h2>
+            <h2 className={styles.name}>{name}</h2>
             <ul className={styles.characteristics}>
               <li>
-                <span className={styles.characteristicTitle}>Geo</span>: {`${geo}`}
+                <span className={styles.characteristicTitle}>Lifespan</span>: {lifeSpan}
               </li>
               <li>
-                <span className={styles.characteristicTitle}>Habitat</span>: {`${habitat}`}
+                <span className={styles.characteristicTitle}>Weight</span>: {weight}
               </li>
               <li>
-                <span className={styles.characteristicTitle}>Lifespan</span>: {`${lifespan}`}
+                <span className={styles.characteristicTitle}>Origin</span>: {origin}
               </li>
               <li>
-                <span className={styles.characteristicTitle}>Length</span>: {`${minLength} - ${maxLength}`}
+                <span className={styles.characteristicTitle}>Temperament</span>: {temperament}
               </li>
               <li>
-                <span className={styles.characteristicTitle}>Weight</span>: {`${minWeight} - ${maxWeight}`}
+                <span className={styles.characteristicTitle}>Description</span>: {description}
               </li>
             </ul>
           </div>
